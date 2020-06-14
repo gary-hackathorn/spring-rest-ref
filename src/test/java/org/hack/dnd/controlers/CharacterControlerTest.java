@@ -37,7 +37,7 @@ class CharacterControlerTest {
     void setUp() {
         objectMapper = new ObjectMapper();
         expected = new ArrayList<>();
-         expected.add(new Character("Viari", 17, 12, 16));
+        expected.add(new Character("Viari", 17, 12, 16));
         expected.add(new Character("Binwin", 18, 10, 17));
     }
 
@@ -50,8 +50,9 @@ class CharacterControlerTest {
         MvcResult response = mockMvc.perform(MockMvcRequestBuilders.get("/character"))
                 .andExpect(status().isOk()).andReturn();
         String body = response.getResponse().getContentAsString();
-        System.out.println("Results:"+body);
-        List<Character> characters = objectMapper.readValue(body, new TypeReference<List<Character>>(){});
+        System.out.println("Results:" + body);
+        List<Character> characters = objectMapper.readValue(body, new TypeReference<List<Character>>() {
+        });
         assertEquals(expected, characters);
     }
 }
