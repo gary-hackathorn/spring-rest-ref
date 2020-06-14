@@ -12,7 +12,7 @@
     <artifactId>dnd</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>dnd</name>
-    <description>D&D Character Database</description>
+    <description>DnD Character Database</description>
 
     <properties>
         <java.version>1.8</java.version>
